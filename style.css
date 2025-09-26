@@ -1,0 +1,192 @@
+:root {
+    --primary-color: #121316;
+    /* almost black  */
+    --secondary-color: #4078a2;
+    /* accent (from logo) */
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav a {
+    color: var(--primary-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* Hero */
+
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/hand-holding-house-real-estate-property-model.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#whatsapp-button a img {
+    width: 60px;
+    height: auto;
+}
+
+.bio-description {
+    background: #faf6f2;
+    border-left: 5px solid #e91e63;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(233, 30, 99, 0.07);
+    padding: 2rem 2rem 2rem 2.5rem;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+}
+
+
+/* Sections */
+
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+
+/* Gallery */
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.swiper {
+    width: 90%;
+    height: 500px;
+    margin: 30px auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+/* Hide Swiper navigation buttons on mobile */
+
+@media (max-width: 600px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
+
+
+/* Contact */
+
+
+/* Footer */
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
